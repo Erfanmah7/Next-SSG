@@ -5,9 +5,9 @@ function userId({ usersId }) {
   const router = useRouter();
 
   //loading fallback : true
-  if (router.isFallback) {
-    return <h2>Fallback Page!</h2>;
-  }
+  // if (router.isFallback) {
+  //   return <h2>Fallback Page!</h2>;
+  // }
 
   return (
     <div>
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   return {
     // paths: [{ params: { userId: "1" } }],
     paths,
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
