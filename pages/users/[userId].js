@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 function userId({ usersId }) {
   const router = useRouter();
 
-  //loading
+  //loading fallback : true
   if (router.isFallback) {
     return <h2>Fallback Page!</h2>;
   }
