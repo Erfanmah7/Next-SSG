@@ -53,5 +53,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { usersId },
+    revalidate: 10, //10 secound data build "ISR"
   };
 }

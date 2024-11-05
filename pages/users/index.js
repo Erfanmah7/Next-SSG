@@ -1,3 +1,4 @@
+import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 
 function Users({ users }) {
@@ -22,5 +23,6 @@ export async function getStaticProps() {
 
   return {
     props: { users },
+    redirect: { destination: "/" },
   };
 }
